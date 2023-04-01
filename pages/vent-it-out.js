@@ -23,7 +23,7 @@ const VentOut = () => {
                     <Link href="/about-us" className="nav-links">
                         About
                     </Link>
-                    <Link href="/moodtracker" className="nav-links">
+                    <Link href="/selfassessment" className="nav-links">
                         Self Assessment Tool
                     </Link>
                     <Link href="/education" className="nav-links">
@@ -105,7 +105,8 @@ const VentOut = () => {
                 </p>
                 <div className="flex flex-col w-[80%] mx-auto mt-5">
                     <Link href="https://discord.gg/DMhqgM9h" target={'_blank'} className='flex flex-row justify-between items-center text-[20px] my-3 border rounded-lg py-10 px-5 hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg'>DISCORD <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></Link>
-                    <Link href="https://open.spotify.com/playlist/37i9dQZF1DXcCnTAt8CfNe?si=V7ETnyKgSM2O8Ho5QV1v8Q&utm_source=whatsapp" target={'_blank'} className='flex flex-row justify-between items-center text-[20px] my-3 border rounded-lg py-10 px-5 hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg'>MUSICAL THERAPY <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></Link>
+                    {/* <Link href="https://open.spotify.com/playlist/37i9dQZF1DXcCnTAt8CfNe?si=V7ETnyKgSM2O8Ho5QV1v8Q&utm_source=whatsapp" target={'_blank'} className='flex flex-row justify-between items-center text-[20px] my-3 border rounded-lg py-10 px-5 hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg'>MUSICAL THERAPY <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></Link> */}
+                    <iframe style={{borderRadius: 12 + 'px'}} src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcCnTAt8CfNe?utm_source=generator" width="100%" height="352" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
             <Footer />
