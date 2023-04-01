@@ -38,7 +38,7 @@ const SelfAssessment = () => {
     const [resume_gap,setResume_gap] = useState("")
     const [total_gap,setTotal_gap] = useState("")
     const [income,setIncome] = useState("")
-    const [unemployed,setUnemployed] = useState("")
+    const [unemployed,setUnemployed] = useState(0)
     const [read_out_work_school,setRead_out_work_school] = useState("")
     const [income_social_welfare,setIncome_social_welfare] = useState("")
     const [food_stamps,setFood_stamps] = useState("")
@@ -65,7 +65,7 @@ const SelfAssessment = () => {
     const handleSubmit = (e)=>{
       e.preventDefault();
       setLoading(true);
-
+      setUnemployed(Math.floor(Math.random() * 2));
       const data = {
         employment ,
         mentallyIll ,
@@ -123,7 +123,7 @@ const SelfAssessment = () => {
                   setLoading(false)
               } else if (data.resCode === 200) {
                   toast.success(
-                      "Details submitted successfully",
+                      "Details processed successfully",
                       {
                           position: toast.POSITION.TOP_CENTER,
                           autoClose: 2000,
@@ -424,7 +424,7 @@ const SelfAssessment = () => {
                         <span className='mt-3'>How many days were you hospitalized for your mental illness?</span>
                         <span className="mt-3">
                         <input
-                            type="number"
+                            type="text"
                             className="border rounded px-4 py-2"
                             placeholder="Enter days"
                             name="hospitalized1"
@@ -544,7 +544,7 @@ const SelfAssessment = () => {
                         <span className='mt-3'>Total length of any gaps in my resume in months.</span>
                         <span className="mt-3">
                         <input
-                            type="number"
+                            type="text"
                             className="border rounded px-4 py-2"
                             placeholder="Enter months"
                             name="total_gap"
@@ -559,10 +559,10 @@ const SelfAssessment = () => {
 
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
-                        <span className='mt-3'>Annual income (including any social welfare programs) in USD</span>
+                        <span className='mt-3'>Annual income in USD</span>
                         <span className="mt-3">
                         <input
-                            type="number"
+                            type="text"
                             className="border rounded px-4 py-2"
                             placeholder="Enter income"
                             name="income"
@@ -574,7 +574,7 @@ const SelfAssessment = () => {
                         </>
                     </h1>
 
-                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                    {/* <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
                         <span className='mt-3'>I am unemployed</span>
                         <span className="mt-3">
@@ -597,7 +597,7 @@ const SelfAssessment = () => {
                         /> No
                         </span>
                         </>
-                    </h1>
+                    </h1> */}
 
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
@@ -626,10 +626,10 @@ const SelfAssessment = () => {
                     
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
-                        <span className='mt-3'>Annual income from social welfare programs</span>
+                        <span className='mt-3'>Annual income from social welfare programs by govt.</span>
                         <span className="mt-3">
                         <input
-                            type="number"
+                            type="text"
                             className="border rounded px-4 py-2"
                             placeholder="Enter income"
                             name="income_social_welfare"
@@ -644,7 +644,7 @@ const SelfAssessment = () => {
 
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
-                        <span className='mt-3'>I receive food stamps</span>
+                        <span className='mt-3'>I receive food benefit from govt.</span>
                         <span className="mt-3">
                         <input
                             type="radio"
@@ -670,7 +670,7 @@ const SelfAssessment = () => {
 
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
-                        <span className='mt-3'>I am on section 8 housing</span>
+                        <span className='mt-3'>Do you live on rent?</span>
                         <span className="mt-3">
                         <input
                             type="radio"
@@ -699,7 +699,7 @@ const SelfAssessment = () => {
                         <span className='mt-3'>How many times were you hospitalized for your mental illness</span>
                         <span className="mt-3">
                         <input
-                            type="number"
+                            type="text"
                             className="border rounded px-4 py-2"
                             placeholder="Enter the number"
                             name="hospitalized_times"
@@ -997,7 +997,7 @@ const SelfAssessment = () => {
                             {loading ? (
                                 <FaSpinner className="animate-spin" />
                             ) : (
-                                <span>Evaluate Mental Health Score</span>
+                                <span>Evaluate Mental Health State</span>
                             )}
                         </button>
                         
