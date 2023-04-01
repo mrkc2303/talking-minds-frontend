@@ -7,6 +7,7 @@ import Footer from '../components/footer'
 import Premium from '../components/premium'
 import HomeNumber from "../components/homenumber"
 import Meta from '../components/meta'
+import Chat from '../components/chat'
 export default function Home() {
   return (
     <div>
@@ -23,6 +24,7 @@ export default function Home() {
       <Premium />
       {/* <Meta /> */}
       <Footer />
+      <Chat />
     </div>
   )
 }

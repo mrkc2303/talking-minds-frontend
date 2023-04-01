@@ -296,7 +296,7 @@ const SelfAssessment = () => {
                             type="radio"
                             name="employment"
                             className='ml-3'
-                            value="Yes"
+                            value="1"
                             onChange={(e) => setEmployment(e.target.value)}
                             required
                         /> Yes
@@ -305,7 +305,7 @@ const SelfAssessment = () => {
                             type="radio"
                             name="employment"
                             className='ml-3'
-                            value="No"
+                            value="0"
                             onChange={(e) => setEmployment(e.target.value)}
                             required
                         /> No
@@ -322,7 +322,7 @@ const SelfAssessment = () => {
                             type="radio"
                             name="mentallyIll"
                             className='ml-3'
-                            value="Yes"
+                            value="1"
                             onChange={(e) => setMentallyIll(e.target.value)}
                             required
                         /> Yes
@@ -331,7 +331,7 @@ const SelfAssessment = () => {
                             type="radio"
                             name="mentallyIll"
                             className='ml-3'
-                            value="No"
+                            value="0"
                             onChange={(e) => setMentallyIll(e.target.value)}
                             required
                         /> No
@@ -345,19 +345,19 @@ const SelfAssessment = () => {
                         <span className="mt-3">
                         <input
                             type="radio"
-                            name="ex"
+                            name="own_computer"
                             className='ml-3'
-                            value="Yes"
-                            onChange={(e) => setExercise(e.target.value)}
+                            value="1"
+                            onChange={(e) => setOwn_computer(e.target.value)}
                             required
                         /> Yes
 
                         <input
                             type="radio"
-                            name="ex"
+                            name="own_computer"
                             className='ml-3'
-                            value="No"
-                            onChange={(e) => setExercise(e.target.value)}
+                            value="0"
+                            onChange={(e) => setOwn_computer(e.target.value)}
                             required
                         /> No
                         </span>
@@ -366,23 +366,23 @@ const SelfAssessment = () => {
 
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
-                        <span className='mt-3'>Have you ever smoked cigarettes?</span>
+                        <span className='mt-3'>I have been hospitalized before for my mental illness</span>
                         <span className="mt-3">
                         <input
                             type="radio"
-                            name="smoke"
+                            name="hospitalized"
                             className='ml-3'
-                            value="Yes"
-                            onChange={(e) => setSmoke(e.target.value)}
+                            value="1"
+                            onChange={(e) => setHospitalized(e.target.value)}
                             required
                         /> Yes
 
                         <input
                             type="radio"
-                            name="smoke"
+                            name="hospitalized"
                             className='ml-3'
-                            value="No"
-                            onChange={(e) => setSmoke(e.target.value)}
+                            value="0"
+                            onChange={(e) => setHospitalized(e.target.value)}
                             required
                         /> No
                         </span>
@@ -392,20 +392,73 @@ const SelfAssessment = () => {
                     
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
-                        <span className='mt-3'>On a scale of 1 to 10, (ten being strongest) how strong is your desire to kill yourself currently?</span>
+                        <span className='mt-3'>How many days were you hospitalized for your mental illness?</span>
                         <span className="mt-3">
                         <input
                             type="number"
                             className="border rounded px-4 py-2"
-                            placeholder="Enter scale (1-10)"
-                            name="scale"
-                            // value={scale}
-                            onChange={(e) => setScale(e.target.value)}
+                            placeholder="Enter days"
+                            name="hospitalized1"
+                            value={hospitalized1}
+                            onChange={(e) => setHospitalized1(e.target.value)}
                             required
                         />
                         </span>
                         </>
                     </h1>
+
+                    
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I am legally disabled</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="legally_disabled"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setLegally_disabled(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="legally_disabled"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setLegally_disabled(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I have my regular access to the internet</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="legally_disabled"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setInternet(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="legally_disabled"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setInternet(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
                     
                     
                    

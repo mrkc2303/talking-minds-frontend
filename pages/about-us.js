@@ -95,22 +95,17 @@ const About = () => {
             </div>
             <h1 className="text-center text-[40px] font-bold mt-10">OUR TEAM</h1>
             <div className="grid lg:grid-cols-2 items-center lg:w-[70%] md:w-[50%] my-20 mx-auto">
-                <div className="border mx-5 flex flex-col items-center w-[350px] h-[400px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
-                    <Image src="/HargunKaur12.jpeg" alt="Hargun Kaur" width={300} height={300} className='rounded-2xl' />
-                    <h1 className="text-[25px] mt-5">Hargun Kaur</h1>
-                    <p className="font-bold">FrontEnd Developer</p>
+                <div className="border mx-5 flex flex-col items-center w-[350px] h-[430px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
+                    <Image src="/sukhbir.jpg" alt="Sukhbir Singh" width={300} height={300} className='rounded-2xl' />
+                    <h1 className="text-[25px] mt-5">Sukhbir Singh</h1>
+                    <p className="font-bold">ML AI</p>
                 </div>
-                <div className="border mx-5 flex flex-col items-center w-[350px] h-[400px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
-                    <img src="/MahakKaur.jpeg" alt="Mahak Kaur" width={300} height={300} className='rounded-2xl' />
-                    <h1 className="text-[25px] mt-5">Mahak Kaur</h1>
-                    <p className="font-bold">UI-UX Design</p>
+                <div className="border mx-5 flex flex-col items-center w-[350px] h-[430px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
+                    <img src="/kanishk.jpeg" alt="kanishk" width={300} height={300} className='rounded-2xl' />
+                    <h1 className="text-[25px] mt-5">Kanishk Chhabra</h1>
+                    <p className="font-bold">Backend developer</p>
                 </div>
-                <div className="border mx-5 flex flex-col items-center w-[350px] h-[400px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
-                    <img src="/taranjot.jpg" alt="Taranjot Singh" width={300} height={300} className='rounded-2xl' />
-                    <h1 className="text-[25px] mt-5">TARANJOT SINGH</h1>
-                    <p className="font-bold">Backend Developer</p>
-                </div>
-                <div className="border mx-5 flex flex-col items-center w-[350px] h-[400px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
+                <div className="border mx-5 flex flex-col items-center w-[350px] h-[430px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
                     <img src="/HarpreetSingh.jpeg" alt="Harpreet Singh" width={300} height={300} className='rounded-2xl' />
                     <h1 className="text-[25px] mt-5">Harpreet Singh</h1>
                     <p className="font-bold">FrontEnd Developer</p>
