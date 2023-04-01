@@ -5,6 +5,8 @@ import Navbar from '../components/navbar';
 import Link from 'next/link';
 import { FaSpinner } from "react-icons/fa";
 import { toast } from 'react-toastify';
+
+import Chat from '../components/chat'
 const Profile = () => {
     const [loggedIn, setLoggedIn] = useState('')
     const [name, setName] = useState('')
@@ -232,6 +234,7 @@ const Profile = () => {
                     </div>
                 </form>
             </div>
+            <Chat />
         </>
     )
 }

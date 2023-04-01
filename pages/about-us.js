@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import Chat from '../components/chat'
 const About = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -112,6 +113,7 @@ const About = () => {
                 </div>
             </div>
             <Footer />
+            <Chat />
         </>
     )
 }

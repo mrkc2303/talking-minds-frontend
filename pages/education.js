@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+import Chat from '../components/chat'
 const Education = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -90,6 +91,7 @@ const Education = () => {
                 <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Attention Deficient Hyperactivity Disorder (ADHD) <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
             </div>
             <Footer />
+            <Chat />
         </>
     )
 }

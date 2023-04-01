@@ -8,6 +8,7 @@ import Image from "next/image";
 import Footer from "../components/footer";
 import Link from "next/link";
 
+import Chat from '../components/chat'
 const Depression = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -319,6 +320,7 @@ const Depression = () => {
                 </button>
             </div>
             <Footer />
+            <Chat />
         </>
     )
 }

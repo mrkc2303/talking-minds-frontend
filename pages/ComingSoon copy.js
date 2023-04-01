@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+import Chat from '../components/chat'
 const ComingSoon = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -81,6 +82,7 @@ const ComingSoon = () => {
                 <h1>STORIES COMING SOON ...</h1>
             </div>
             <Footer />
+            
         </>
     )
 }

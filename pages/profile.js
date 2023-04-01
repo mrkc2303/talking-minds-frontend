@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from "next/image";
 import { FaSpinner } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+
+import Chat from '../components/chat'
 const UserProfile = () => {
     const [loggedIn, setLoggedIn] = useState('')
     const [ngoDetail, setNgoDetail] = useState({})
@@ -329,6 +331,7 @@ const UserProfile = () => {
                 </form>
                 }
             </div>
+            <Chat />
         </>
     )
 }

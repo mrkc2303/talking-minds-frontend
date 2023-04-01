@@ -18,6 +18,7 @@ import {
   from 'mdb-react-ui-kit';
 // import { LockClosedIcon } from '@heroicons/react/solid'
 
+import Chat from '../components/chat'
 const SelfAssessment = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -440,7 +441,7 @@ const SelfAssessment = () => {
                         <span className="mt-3">
                         <input
                             type="radio"
-                            name="legally_disabled"
+                            name="internet"
                             className='ml-3'
                             value="1"
                             onChange={(e) => setInternet(e.target.value)}
@@ -449,7 +450,7 @@ const SelfAssessment = () => {
 
                         <input
                             type="radio"
-                            name="legally_disabled"
+                            name="internet"
                             className='ml-3'
                             value="0"
                             onChange={(e) => setInternet(e.target.value)}
@@ -460,8 +461,117 @@ const SelfAssessment = () => {
                     </h1>
 
                     
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I live with my parents</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="live_parents"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setLive_parents(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="live_parents"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setLive_parents(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I have a gap in my resume</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="resume_gap"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setResume_gap(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="resume_gap"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setResume_gap(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
                     
-                   
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Total length of any gaps in my resume in months.</span>
+                        <span className="mt-3">
+                        <input
+                            type="number"
+                            className="border rounded px-4 py-2"
+                            placeholder="Enter months"
+                            name="total_gap"
+                            value={total_gap}
+                            onChange={(e) => setTotal_gap(e.target.value)}
+                            required
+                        />
+                        </span>
+                        </>
+                    </h1>
+                    
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Annual income (including any social welfare programs) in USD</span>
+                        <span className="mt-3">
+                        <input
+                            type="number"
+                            className="border rounded px-4 py-2"
+                            placeholder="Enter income"
+                            name="income"
+                            value={income}
+                            onChange={(e) => setIncome(e.target.value)}
+                            required
+                        />
+                        </span>
+                        </>
+                    </h1>
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I am unemployed</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="unemployed"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setUnemployed(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="unemployed"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setUnemployed(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+                    
+
                 </div>
                 <div className="flex justify-center mt-5">
                         <button
@@ -500,6 +610,7 @@ const SelfAssessment = () => {
                 
          
             <Footer />
+            <Chat />
         </>
     )
 }

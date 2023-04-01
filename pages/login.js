@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import { toast } from "react-toastify";
 import Link from "next/link";
 
+import Chat from '../components/chat'
 const Login = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -199,6 +200,7 @@ const Login = () => {
                 </form>
             </div>
             <Footer />
+            <Chat />
         </>
     )
 }

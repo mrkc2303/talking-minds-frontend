@@ -5,6 +5,7 @@ import Link from "next/link";
 import Meta from "../components/meta";
 import HomeNumber from "../components/homenumber";
 
+import Chat from '../components/chat'
 const Consult = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -92,6 +93,7 @@ const Consult = () => {
 
             </div>
             <Footer />
+            <Chat />
         </>
     )
 }

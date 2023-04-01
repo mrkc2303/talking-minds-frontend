@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import { toast } from "react-toastify";
 import Link from "next/link";
 
+import Chat from '../components/chat'
 const Signup = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -258,6 +259,7 @@ const Signup = () => {
                 <p className='mb-10'>Already have an account? <span className=' text-blue-800 cursor-pointer' onClick={() => router.push('/login')}>LogIn</span></p>
             </div>
             <Footer />
+            <Chat />
         </>
     )
 }

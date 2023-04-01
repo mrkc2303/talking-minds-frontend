@@ -18,6 +18,7 @@ import {
   from 'mdb-react-ui-kit';
 // import { LockClosedIcon } from '@heroicons/react/solid'
 
+import Chat from '../components/chat'
 const MoodTracker = () => {
 
     const [loggedIn, setLoggedIn] = useState(false)
@@ -357,6 +358,7 @@ const MoodTracker = () => {
                 
          
             <Footer />
+            <Chat />
         </>
     )
 }
