@@ -18,7 +18,7 @@ const Footer = () => {
             <Link href="/education" className="foot-links">
               EDUCATION
             </Link>
-            <Link href="/moodtracker" className="foot-links">
+            <Link href="/selfassessment" className="foot-links">
               Self Assement Tool
             </Link>
             <Link href="/vent-it-out" className="foot-links">

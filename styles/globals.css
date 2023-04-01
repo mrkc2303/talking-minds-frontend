@@ -97,7 +97,7 @@ a {
 }
 
 .about {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 40px;
   margin-left: 10px;
   margin-right: 10px;
@@ -105,6 +105,35 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.aboutCall {
+  flex-direction: row;
+}
+
+.roomCodeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.roomCodeForm div {
+  width: 100%;
+  border-right: #07337f 2px solid;
+}
+
+.roomCodeForm input {
+  width: 60%;
+}
+
+.roomCodeForm label {
+  width: 20%;
+  margin-right: 10%;
+}
+
+.callForm, .callJoin {
+  width: 50%;
 }
 
 .about-para {

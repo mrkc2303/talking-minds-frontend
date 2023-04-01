@@ -15,7 +15,7 @@ const Content = () => {
               It&apos;s self-help tools help you reframe your issues and see
               them in a different light.
             </p>
-            <Link href="/moodtracker" className="hover:underline">
+            <Link href="/selfassessment" className="hover:underline">
               Try Now!
             </Link>
           </div>
