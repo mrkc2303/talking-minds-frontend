@@ -43,6 +43,7 @@ const SelfAssessment = () => {
     const [income_social_welfare,setIncome_social_welfare] = useState("")
     const [food_stamps,setFood_stamps] = useState("")
     const [section_8,setSection_8] = useState("")
+    const [hospitalized_times,setHospitalized_times] = useState("")
     const [lack_concentration,setLack_concentration] = useState("")
     const [anxiety,setAnxiety] = useState("")
     const [depression,setDepression] = useState("")
@@ -83,6 +84,7 @@ const SelfAssessment = () => {
         income_social_welfare ,
         food_stamps ,
         section_8 ,
+        hospitalized_times,
         lack_concentration ,
         anxiety ,
         depression ,
@@ -130,9 +132,36 @@ const SelfAssessment = () => {
                   
                   setMessage(data.message);
                   console.log(data)
-                  setLoading(false)
-                  
-              }
+                  setLoading(false)             
+                  setAge("")
+                  setAnxiety("")
+                  setCompulsive_behavior("")
+                  setDepression("")
+                  setEducation("")
+                  setEmployment("")
+                  setFood_stamps("")
+                  setGender("")
+                  setHospitalized("")
+                  setHospitalized1("")
+                  setHospitalized_times("")
+                  setIncome("")
+                  setIncome_social_welfare("")
+                  setInternet("")
+                  setLack_concentration("")
+                  setLegally_disabled("")
+                  setLive_parents("")
+                  setMentallyIll("")
+                  setMood_swings("")
+                  setObsessive_thinking("")
+                  setOwn_computer("")
+                  setPanic_attacks("")
+                  setRead_out_work_school("")
+                  setResume_gap("")
+                  setSection_8("")
+                  setTiredness("")
+                  setTotal_gap("")
+                  setUnemployed("")
+            }
               console.log(data);
               
           })
@@ -202,7 +231,6 @@ const SelfAssessment = () => {
                     </div>
                 )}
             </div>
-            {/* <div className="my-40 text-center text-[50px] font-bold"> */}
            
 
 
@@ -570,7 +598,394 @@ const SelfAssessment = () => {
                         </span>
                         </>
                     </h1>
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I read outside of work and school</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="read_out_work_school"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setRead_out_work_school(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="read_out_work_school"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setRead_out_work_school(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
                     
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Annual income from social welfare programs</span>
+                        <span className="mt-3">
+                        <input
+                            type="number"
+                            className="border rounded px-4 py-2"
+                            placeholder="Enter income"
+                            name="income_social_welfare"
+                            value={income_social_welfare}
+                            onChange={(e) => setIncome_social_welfare(e.target.value)}
+                            required
+                        />
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I receive food stamps</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="food_stamps"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setFood_stamps(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="food_stamps"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setFood_stamps(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>I am on section 8 housing</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="section_8"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setSection_8(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="section_8"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setSection_8(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>How many times were you hospitalized for your mental illness</span>
+                        <span className="mt-3">
+                        <input
+                            type="number"
+                            className="border rounded px-4 py-2"
+                            placeholder="Enter the number"
+                            name="hospitalized_times"
+                            value={hospitalized_times}
+                            onChange={(e) => setHospitalized_times(e.target.value)}
+                            required
+                        />
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Lack of concentration</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="lack_concentration"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setLack_concentration(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="lack_concentration"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setLack_concentration(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Anxiety</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="anxiety"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setAnxiety(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="anxiety"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setAnxiety(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Depression</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="depression"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setDepression(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="depression"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setDepression(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+                    {/* Obsessive thinking */}
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Obsessive thinking</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="obsessive_thinking"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setObsessive_thinking(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="obsessive_thinking"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setObsessive_thinking(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Mood swings</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="mood_swings"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setMood_swings(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="mood_swings"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setMood_swings(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Panic attacks</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="panic_attacks"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setPanic_attacks(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="panic_attacks"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setPanic_attacks(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Compulsive behavior</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="compulsive_behavior"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setCompulsive_behavior(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="compulsive_behavior"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setCompulsive_behavior(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Tiredness</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="tiredness"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setTiredness(e.target.value)}
+                            required
+                        /> Yes
+
+                        <input
+                            type="radio"
+                            name="tiredness"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setTiredness(e.target.value)}
+                            required
+                        /> No
+                        </span>
+                        </>
+                    </h1>
+
+                    
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Age</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="age"
+                            className='ml-3'
+                            value="65"
+                            onChange={(e) => setAge(e.target.value)}
+                            required
+                        /> {">60"}
+
+                        <input
+                            type="radio"
+                            name="age"
+                            className='ml-3'
+                            value="52"
+                            onChange={(e) => setAge(e.target.value)}
+                            required
+                        /> 45-60
+                        <input
+                            type="radio"
+                            name="age"
+                            className='ml-3'
+                            value="37"
+                            onChange={(e) => setAge(e.target.value)}
+                            required
+                        /> 30-44
+                        <input
+                            type="radio"
+                            name="age"
+                            className='ml-3'
+                            value="23"
+                            onChange={(e) => setAge(e.target.value)}
+                            required
+                        /> 18-29
+                        </span>
+                        </>
+                    </h1>
+
+                    
+
+                    <h1 className="flex flex-row justify-between mx-5 mt-5">
+                         <>
+                        <span className='mt-3'>Gender</span>
+                        <span className="mt-3">
+                        <input
+                            type="radio"
+                            name="gender"
+                            className='ml-3'
+                            value="1"
+                            onChange={(e) => setGender(e.target.value)}
+                            required
+                        /> Male
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            className='ml-3'
+                            value="0"
+                            onChange={(e) => setGender(e.target.value)}
+                            required
+                        /> Female
+                        </span>
+                        </>
+                    </h1>
+
 
                 </div>
                 <div className="flex justify-center mt-5">
@@ -592,7 +1007,6 @@ const SelfAssessment = () => {
                 <span>
                           {message!=""?
                             <>
-                              <h1 className="text-center">Your mental health score is: {score}</h1>
                               <h4 className="text-center">Message for you: {message}</h4>
                             </>
                           :
