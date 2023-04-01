@@ -265,3 +265,13 @@ a {
     width: 90%;
   }
 }
+
+.rightClose {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+}
+
+.ethTitle {
+  margin-top: 50px;
+}

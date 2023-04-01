@@ -31,7 +31,7 @@ const Premium = () => {
             className="border-black rounded-full bg-white w-40"
             onClick={() => swiperRef.current?.slidePrev()}
           >
-            <img src="https://img.icons8.com/ios-glyphs/40/null/chevron-left.png" />
+            <Image src="https://img.icons8.com/ios-glyphs/40/null/chevron-left.png" />
           </button>
         )}
         <Swiper
@@ -114,7 +114,7 @@ const Premium = () => {
             className="border-black rounded-full bg-white w-40"
             onClick={() => swiperRef.current?.slideNext()}
           >
-            <img src="https://img.icons8.com/ios-glyphs/40/null/chevron-right.png" />
+            <Image src="https://img.icons8.com/ios-glyphs/40/null/chevron-right.png" />
           </button>
         )}
       </div>

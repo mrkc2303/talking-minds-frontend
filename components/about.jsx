@@ -11,7 +11,7 @@ const About = () => {
         </p>
         <div className="about-container mt-10">
           <div className="about-box">
-            <img
+            <Image
               src="/mood-track.png"
               alt="mood-track"
               width="60px"
@@ -20,7 +20,7 @@ const About = () => {
             <h2>Self Assessment Tool</h2>
           </div>
           <div className="about-box">
-            <img
+            <Image
               src="/education.png"
               alt="mood-track"
               width="60px"
@@ -29,11 +29,11 @@ const About = () => {
             <h2>Education</h2>
           </div>
           <div className="about-box">
-            <img src="/relax.png" alt="mood-track" width="60px" height="60px" />
+            <Image src="/relax.png" alt="mood-track" width="60px" height="60px" />
             <h2>Vent It Out</h2>
           </div>
           <div className="about-box">
-            <img src="/consult.jpg" alt="mood-track" width="60px" height="60px" />
+            <Image src="/consult.jpg" alt="mood-track" width="60px" height="60px" />
             <h2>Consult</h2>
           </div>
         </div>

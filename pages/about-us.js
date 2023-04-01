@@ -18,7 +18,7 @@ const About = () => {
     return (
         <>
             <div className="flex flex-row justify-around items-center w-full bg-[#1551b8] text-white text-[8px] md:text-[16px]">
-                <img src="/logo.jpg" alt="logo" width={100} height={100} onClick={() => router.push("/")}
+                <Image src="/logo.jpg" alt="logo" width={100} height={100} onClick={() => router.push("/")}
                     className="cursor-pointer" />
                 <div className="navlink">
                     <Link href="/about-us" className="nav-links">
@@ -102,12 +102,12 @@ const About = () => {
                     <p className="font-bold">ML AI</p>
                 </div>
                 <div className="border mx-5 flex flex-col items-center w-[350px] h-[430px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
-                    <img src="/kanishk.jpeg" alt="kanishk" width={300} height={300} className='rounded-2xl' />
+                    <Image src="/kanishk.jpeg" alt="kanishk" width={300} height={300} className='rounded-2xl' />
                     <h1 className="text-[25px] mt-5">Kanishk Chhabra</h1>
                     <p className="font-bold">Backend developer</p>
                 </div>
                 <div className="border mx-5 flex flex-col items-center w-[350px] h-[430px] mb-10 bg-[#f1f5fb] shadow-xl text-[#1551b8] rounded-xl">
-                    <img src="/HarpreetSingh.jpeg" alt="Harpreet Singh" width={300} height={300} className='rounded-2xl' />
+                    <Image src="/HarpreetSingh.jpeg" alt="Harpreet Singh" width={300} height={300} className='rounded-2xl' />
                     <h1 className="text-[25px] mt-5">Harpreet Singh</h1>
                     <p className="font-bold">FrontEnd Developer</p>
                 </div>

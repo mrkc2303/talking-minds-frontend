@@ -33,7 +33,7 @@
             
             Best regards,<br>
             Team Talking Minds<br>
-            <img src="${req.body.img}" alt="Talking Minds Logo" height="200px"/>
+            <Image src="${req.body.img}" alt="Talking Minds Logo" height="200px"/>
             </div>`,
     }
     transporter.sendMail(mailData, function (err, info) {

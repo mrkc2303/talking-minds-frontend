@@ -5,7 +5,7 @@ const Content = () => {
     <>
       <div className="content">
         <div className="content-box mood">
-          <img src="/mood.jpg" alt="mood" width={500} height={500} />
+          <Image src="/mood.jpg" alt="mood" width={500} height={500} />
           <div>
             <h1 className="text-[30px] italic">Self Assessment Tool</h1>
             <p>
@@ -21,7 +21,7 @@ const Content = () => {
           </div>
         </div>
         <div className="content-box mental-education">
-          <img
+          <Image
             src="/mental-education.jpeg"
             alt="mental-education"
             width={500}
@@ -40,7 +40,7 @@ const Content = () => {
           </div>
         </div>
         <div className="content-box vent-out">
-          <img src="/vent-out.jpeg" alt="vent-out" width={500} height={500} />
+          <Image src="/vent-out.jpeg" alt="vent-out" width={500} height={500} />
           <div>
             <h1 className="text-[30px] italic">Vent It Out!</h1>
             <p>
@@ -56,7 +56,7 @@ const Content = () => {
           </div>
         </div>
         <div className="content-box mental-education p-10">
-          <img
+          <Image
             src="/mental-consult.jpg"
             alt="mental-consult"
             width={500}

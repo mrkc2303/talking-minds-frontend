@@ -75,7 +75,7 @@ const Profile = () => {
     return (
         <>  
             <div className="flex flex-row justify-around items-center w-full bg-[#1551b8] text-white text-[8px] md:text-[16px]">
-                <img src="/logo.jpg" alt="logo" width={100} height={100} onClick={() => router.push("/")}
+                <Image src="/logo.jpg" alt="logo" width={100} height={100} onClick={() => router.push("/")}
                     className="cursor-pointer" />
                 <div className="navlink">
                     <Link href="/about-us" className="nav-links">

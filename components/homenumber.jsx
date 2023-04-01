@@ -1,5 +1,20 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import { useRouter } from 'next/router';
+import Modal from 'react-modal'
+import { AppContext } from '../context/AppContext';
+import Web3 from 'web3';
+import { ToastContainer, toast } from 'react-toastify';
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 
 const HomeNumber = () => {
 
@@ -7,6 +22,74 @@ const HomeNumber = () => {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [dt, setDt] = useState("");
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    const { account, connectWallet, error } = useContext(AppContext);
+
+
+    // const sendToast = () => {
+    //   toast.info('🦄 Wow so easy!', {
+    //     position: "top-center",
+    //     autoClose: 5000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "light",
+    //     });
+      
+    // }
+
+    const sendToast2 = () => {
+      toast.success('🦄 Success, Please Check Your Email', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+        closeModal();
+    }
+
+    const payViaMetamask = async () => {
+      const abc = "0x" + Number(Web3.utils.toWei("0.005", "ether")).toString(16);
+      console.log(abc)
+      await ethereum
+      .request({
+        method: 'eth_sendTransaction',
+        params: [
+          {
+            from: account,
+            to: '0x23652313a54a063bCa8DcE470C5E31C6d27f78F2',
+            value: abc,
+            // gasPrice: '0x09184e72a000',
+            // gas: '0x2710',
+            // chainId: '80001'
+          },
+        ],
+      })
+      .then((txHash) => console.log(txHash))
+      //.then(() => sendToast())
+      .then(() => sendToast2())
+      .then(() => sendRoomEmail())
+      .catch((error) => console.error(error));
+    }
+
+    const payViaRazorpay = () => {
+      console.log("ABC")
+    }
+
+    function openModal() {
+      setIsOpen(true);
+    }
+  
+    function closeModal() {
+      setIsOpen(false);
+    }
 
     const router=useRouter()
 
@@ -14,6 +97,10 @@ const HomeNumber = () => {
        router.push(`/room/${value}`)
     }, [router, value])
 
+    // const handleCallPayment = () => {
+
+    // }
+    
     const sendRoomEmail = async() => {
       //async function welcomeEmail() {
     
@@ -63,6 +150,39 @@ const HomeNumber = () => {
 
     return (
     <>
+    <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        />
+    <Modal
+        isOpen={modalIsOpen}
+        // onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <button onClick={closeModal} className='rightClose'><b>x</b></button>
+        <h2>₹499</h2>
+        <div className="flex justify-center mt-5">
+          <button onClick={payViaRazorpay} className="py-1 px-7 mb-3 text-white font-bold bg-[#1551b8] border rounded hover:text-[#1551b8] hover:bg-white">Pay via Razorpay</button>
+        </div>
+        <h2 className='ethTitle'>0.005 ETH</h2>
+        <div className="flex justify-center mt-5">
+          {account ? (
+            <button onClick={payViaMetamask} className="py-1 px-7 mb-3 text-white font-bold bg-[#1551b8] border rounded hover:text-[#1551b8] hover:bg-white">Pay via Metamask</button>
+          ) : (
+            <button className="py-1 px-7 mb-3 text-white font-bold bg-[#1551b8] border rounded hover:text-[#1551b8] hover:bg-white" onClick={connectWallet}>Connect Metamask</button>
+          )}
+        </div>
+      </Modal>
     <div className="about aboutCall">
       <div className='callForm'>
         <h1 className="about-title text-[30px]">Schedule a One-on-One Call</h1>
@@ -81,7 +201,7 @@ const HomeNumber = () => {
           </div>
           
           <div className="flex justify-center pt-5">
-            <button onClick={() => sendRoomEmail()} className="py-1 px-7 mb-3 text-white font-bold bg-[#1551b8] border rounded hover:text-[#1551b8] hover:bg-white">Submit</button>
+             <button type="button" onClick={openModal} className="py-1 px-7 mb-3 text-white font-bold bg-[#1551b8] border rounded hover:text-[#1551b8] hover:bg-white">Submit</button>
           </div>
 
         </form>
@@ -95,6 +215,7 @@ const HomeNumber = () => {
       </div>
       
     </div>
+    
   </>
   );
 };

@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <>
       <div className="hero">
-        {/* <img src="/hero-banner.jpg" alt="hero-banner" className="banner" /> */}
+        {/* <Image src="/hero-banner.jpg" alt="hero-banner" className="banner" /> */}
         
         <div className="hero-para" 
         // style={{marginLeft:"20%"}}
@@ -11,7 +11,7 @@ const Hero = () => {
           anybody in the entire universe, deserve your love and affection.
         </div>
         <div>
-          <img src="/mentalhealth.jpeg" alt="hero-banner" 
+          <Image src="/mentalhealth.jpeg" alt="hero-banner" 
           // style={{marginLeft:"55%", paddingTop:"5%"
           // }} 
         width="500px" />

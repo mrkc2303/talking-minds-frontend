@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const router = useRouter();
   return (
     <>
       <div className="footer">
-        <img
+        <Image
           src="/logo-black.jpg"
           alt="logo"
           width={200}

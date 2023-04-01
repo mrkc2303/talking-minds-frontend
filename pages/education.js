@@ -17,7 +17,7 @@ const Education = () => {
     return (
         <>
             <div className="flex flex-row justify-around items-center w-full bg-[#1551b8] text-white text-[8px] md:text-[16px]">
-                <img src="/logo.jpg" alt="logo" width={100} height={100} onClick={() => router.push("/")}
+                <Image src="/logo.jpg" alt="logo" width={100} height={100} onClick={() => router.push("/")}
                     className="cursor-pointer" />
                 <div className="navlink">
                     <Link href="/about-us" className="nav-links">
@@ -84,11 +84,11 @@ const Education = () => {
                     Also, helps to make the information more relatable and engaging, and can also help to reduce stigma and promote understanding.</p>
             </div>
             <div className="flex flex-col my-20 w-[80%] mx-auto">
-                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/depression')}>Depression <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
-                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Anxiety <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
-                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Addiction <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
-                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Personality Disorder <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
-                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Attention Deficient Hyperactivity Disorder (ADHD) <img src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
+                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/depression')}>Depression <Image src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
+                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Anxiety <Image src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
+                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Addiction <Image src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
+                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Personality Disorder <Image src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
+                <div className="flex flex-row items-center justify-between py-8 px-5 my-2 text-[20px] border rounded-lg hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg" onClick={() => router.push('/ComingSoon')}>Attention Deficient Hyperactivity Disorder (ADHD) <Image src="https://img.icons8.com/material-rounded/24/null/chevron-right.png" /></div>
             </div>
             <Footer />
             <Chat />

@@ -24,7 +24,7 @@ const Navbar = () => {
     <>
       {console.log(loggedIn)}
       <div className={`${colorChange ? "navbar2" : "navbar"}`}>
-        <img
+        <Image
           src="/logo.jpg"
           alt="logo"
           width={100}
