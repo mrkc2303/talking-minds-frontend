@@ -227,7 +227,7 @@ const MoodTracker = () => {
 
                     <h1 className="flex flex-row justify-between mx-5 mt-5">
                          <>
-                        <span className='mt-3'>Have you ever had feelings or thoughts that you didn't want to live?</span>
+                        <span className='mt-3'>Have you ever had feelings or thoughts that you didn&apos;t want to live?</span>
                         <span className="mt-3">
                         <input
                             type="radio"
