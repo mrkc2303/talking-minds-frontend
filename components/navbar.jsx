@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+import Image from "next/image";
 const Navbar = () => {
   const [colorChange, setColorchange] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);

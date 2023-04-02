@@ -3,6 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 const Premium = () => {
   const swiperRef = useRef();

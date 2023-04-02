@@ -2,6 +2,7 @@ import Link from "next/link"
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../context/AppContext";
 import { ethers } from "ethers";
+import Image from "next/image";
 let Web3 = require('web3');
 // import mintAndSend from "../utils/mintAndSend";
 

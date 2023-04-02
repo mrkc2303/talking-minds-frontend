@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaSpinner } from "react-icons/fa";
 import { toast } from "react-toastify";
+import Image from "next/image";
 import {
     MDBBtn,
     MDBContainer,

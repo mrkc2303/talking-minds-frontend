@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { FaSpinner } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import Image from "next/image";
 
 import Chat from '../components/chat'
 const UserProfile = () => {

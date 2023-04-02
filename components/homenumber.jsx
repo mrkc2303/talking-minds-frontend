@@ -4,6 +4,7 @@ import Modal from 'react-modal'
 import { AppContext } from '../context/AppContext';
 import Web3 from 'web3';
 import { ToastContainer, toast } from 'react-toastify';
+import Image from "next/image";
 
 const customStyles = {
   content: {

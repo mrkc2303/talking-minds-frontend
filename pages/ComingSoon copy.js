@@ -2,6 +2,7 @@ import Footer from "../components/footer";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import Chat from '../components/chat'
 const ComingSoon = () => {

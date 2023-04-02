@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Meta from "../components/meta";
 import HomeNumber from "../components/homenumber";
-
+import Image from "next/image";
 import Chat from '../components/chat'
 const Consult = () => {
 

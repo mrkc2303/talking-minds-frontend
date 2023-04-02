@@ -8,6 +8,7 @@ import Premium from '../components/premium'
 import HomeNumber from "../components/homenumber"
 import Meta from '../components/meta'
 import Chat from '../components/chat'
+import Image from "next/image";
 export default function Home() {
   return (
     <div>

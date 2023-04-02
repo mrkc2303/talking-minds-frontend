@@ -4,6 +4,7 @@ import { FaSpinner } from "react-icons/fa";
 import Footer from "../components/footer";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import Image from "next/image";
 
 import Chat from '../components/chat'
 const Signup = () => {
